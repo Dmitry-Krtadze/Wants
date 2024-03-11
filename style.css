@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e2c;
+    background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+
+}
+#container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.258);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+h1 {
+    color: #0800ff;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.416);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    color: #333;
+}
+
+li p::after{
+    content: '✖';
+    text-decoration: none;
+    position: relative;
+    left: 25px;
+}
+li.have p::after{
+    content: '✔';
+    text-decoration: none;
+    position: relative;
+    left: 25px;
+}
+li.have p{
+
+    text-decoration: line-through;
+}
+
+#flying-image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: all 1s ease;
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    16.666% { color: orange; }
+    33.333% { color: yellow; }
+    50% { color: green; }
+    66.666% { color: blue; }
+    83.333% { color: indigo; }
+    100% { color: violet; }
+}
+
+.rainbow-text {
+    font-size: 24px;
+    font-weight: bold;
+    animation: rainbow 2s linear infinite;
+}
+.flying-image{
+    position: absolute;
+    width: 100px;
+}
